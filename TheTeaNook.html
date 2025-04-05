@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Tea, Tea Supplies, Tea Cups, Tea Bags, Teapots, Accessories" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Gloria+Hallelujah&family=Sacramento&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-image: url('background.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    header img {
+      display: block;
+      margin: 0 auto;
+      width: 150px;
+      height: auto;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background-color: #305536;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 20px;
+      margin: 0;
+      display: inline-block;
+    }
+
+    nav a:hover {
+      background-color: #a0673a;
+      border-radius: 5px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #a0673a;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 12px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #4CAF50;
+    }
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .search-container input[type="text"] {
+      padding: 6px;
+      margin: 0 10px;
+      font-size: 17px;
+      border: 1px solid #ccc;
+    }
+
+    .search-container button {
+      padding: 6px 10px;
+      background: #ddd;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-container button:hover {
+      background: #ccc;
+    }
+
+    .main-text {
+      padding: 40px 20px;
+      text-align: left;
+    }
+
+    .text1 {
+      font-family: "Cookie", cursive;
+      font-size: 70px;
+      line-height: 0.9;
+    }
+
+    .text {
+      font-family: "Playwrite GB S", cursive;
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .text2 {
+      font-family: "Cookie", cursive;
+      font-size: 50px;
+      margin-top: 20px;
+    }
+
+    .shopnow {
+      display: flex;
+      justify-content: left;
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+
+    .shopnow img {
+      max-width: 30%;
+      height: auto;
+    }
+.icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.icons img {
+  width: 40px;
+  height: 40px;
+}
+
+    footer {
+      background-color: #305536;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .search-container {
+        margin-top: 10px;
+        justify-content: center;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="logo.jpg" alt="The Tea Nook Logo" />
+  </header>
+
+  <nav>
+    <a href="About us.html">ABOUT US</a>
+    <div class="dropdown">
+      <a href="Products.html">PRODUCTS</a>
+      <div class="dropdown-content">
+        <a href="Teas.html">TEA BAGS</a>
+        <a href="Tea Leaves.html">LOOSE-LEAF TEAS</a>
+        <a href="Tea Cups.html">TEACUPS</a>
+        <a href="Teapots.html">TEAPOTS & KETTLES</a>
+        <a href="Infusers.html">INFUSERS</a>
+        <a href="New Arrivals.html">NEW ARRIVALS</a>
+        <a href="Best Sellers.html">BEST SELLERS</a>
+      </div>
+    </div>
+    <a href="Shopping Cart.html">SHOPPING CART</a>
+    <a href="Contact Us.html">CONTACT US</a>
+    <div class="search-container">
+      <a href="Sign In.html"><img src="Sign In.png" height="35" width="40" alt="Sign In" /></a>
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search..." name="search" />
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="main-text">
+    <p class="text1">Welcome to The <br> Tea Nook <img src="teacup.gif" style="width:55px;height:55px;" /></p>
+    <p class="text">Your one-stop shop with everything you<br /> need to enjoy, prepare and enhance your<br /> tea drinking experience.</p>
+    <p class="text2">Brew wellness, sip happiness</p>
+  </div>
+
+  <div class="shopnow">
+    <a href="Products.html"><img src="shopnow.png" alt="Shop Now" /></a>
+  </div>
+
+<div class="icons">
+  <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook" /></a>
+  <a href="https://www.instagram.com/"><img src="instagram.png" alt="Instagram" /></a>
+</div>
+  <footer>
+    <p>© 2025 The Tea Nook. All rights reserved</p>
+  </footer>
+</body>
+
+</html>

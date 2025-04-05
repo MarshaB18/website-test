@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Tea Nook</title>
+    <style>
+	    * {
+			box-sizing: border-box;
+			text-align: center;
+		}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc;
+            color: #4b382a;
+        }
+        header {
+            background-color: #c9c561;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #305536;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #a0673a;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #6b4226;
+        }
+        .contact-details {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .contact-details p {
+            font-size: 18px;
+        }
+        .contact-form {
+            width: 50%;
+            margin: auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .btn {
+            width: 100%;
+            background-color: #305536;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #a0673a;
+        }
+        .map {
+            margin-top: 20px;
+            text-align: center;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #305536;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<a href="TheTeaNook.html"><img src="logo.jpg" width= "150" height= "150"></a>
+    <header>
+        <h1>CONTACT US</h1>
+    </header>
+
+    <nav>
+        <a href="TheTeaNook.html">HOME</a>
+        <a href="Products.html">PRODUCTS</a>
+        <a href="Shopping Cart.html">SHOPPING CART</a>
+		<a href="About us.html">ABOUT US</a>
+    </nav>
+
+    <div class="container">
+        <h2>Get in Touch</h2>
+        <p>We'd love to hear from you! Whether you have questions, feedback, or need assistance, feel free to reach out.</p>
+
+        <div class="contact-details">
+            <p><strong>📍 Address:</strong> 45 Salazar Trace, Point Fortin TT</p>
+            <p><strong>📞 Phone:</strong> +1(868) 473-7890</p>
+            <p><strong>📧 Email:</strong> support@theteanook.com</p>
+            <p><strong>🕒 Working Hours:</strong> Mon-Fri: 9am - 6pm | Sat-Sun: 10am - 4pm</p>
+        </div>
+
+        <h2>Send Us a Message</h2>
+        <div class="contact-form">
+            <form action="contact_process.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+
+        <h2>Visit Us</h2>
+        <div class="map">
+            <!-- Replace with your store's actual Google Map embed link -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d2329.29766059814!2d-61.66901675866895!3d10.153488368286585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d10.15447844287555!2d-61.667745391735764!5e1!3m2!1sen!2stt!4v1743187984530!5m2!1sen!2stt"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 The Tea Nook. All rights reserved</p>
+    </footer>
+
+</body>
+</html>

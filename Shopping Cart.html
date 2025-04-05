@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPING CART - The Tea Nook</title>
+    <style>
+	  * {
+			box-sizing: border-box;
+			text-align: center;
+		}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5dc;
+            color: #4b382a;
+        }
+        header {
+            background-color: #c9c561;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #305536;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #a0673a;
+            border-radius: 5px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #305536;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #305536;
+            color: white;
+        }
+        .quantity input {
+            width: 40px;
+            text-align: center;
+            padding: 5px;
+        }
+        .remove-btn {
+            background-color: #b22222;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .remove-btn:hover {
+            background-color: #8b0000;
+        }
+        .cart-summary {
+            margin-top: 20px;
+            font-size: 18px;
+            text-align: right;
+        }
+        .checkout-btn {
+            background-color: #305536;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .checkout-btn:hover {
+            background-color: #a0673a;
+        }
+        footer {
+            background-color: #305536;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function updateTotal() {
+            let cartRows = document.querySelectorAll(".cart-item");
+            let total = 0;
+
+            cartRows.forEach(row => {
+                let price = parseFloat(row.querySelector(".price").textContent.replace("$", ""));
+                let quantity = row.querySelector(".quantity input").value;
+                let subtotal = price * quantity;
+                row.querySelector(".subtotal").textContent = "$" + subtotal.toFixed(2);
+                total += subtotal;
+            });
+
+            document.getElementById("cart-total").textContent = "$" + total.toFixed(2);
+        }
+
+        function removeItem(button) {
+            button.parentElement.parentElement.remove();
+            updateTotal();
+        }
+    </script>
+</head>
+<body onload="updateTotal()">
+<a href="TheTeaNook.html"><img src="logo.jpg" width= "150" height= "150"></a>
+    <header>
+        <h1>SHOPPING CART</h1>
+    </header>
+
+    <nav>
+        <a href="TheTeaNook.html">HOME</a>
+        <a href="Products.html">PRODUCTS</a>
+        <a href="Contact Us.html">CONTACT US</a>
+        <a href="About Us.html">ABOUT US</a>
+    </nav>
+
+    <div class="container">
+        <h2>Your Cart Items</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cart-item">
+                    <td>Herbal Tea Leaves</td>
+                    <td class="price">$35.00</td>
+                    <td class="quantity"><input type="number" value="1" min="1" onchange="updateTotal()"></td>
+                    <td class="subtotal">$35.00</td>
+                    <td><button class="remove-btn" onclick="removeItem(this)">Remove</button></td>
+                </tr>
+                <tr class="cart-item">
+                    <td> Chamomile Black Tea</td>
+                    <td class="price">$130.00</td>
+                    <td class="quantity"><input type="number" value="2" min="1" onchange="updateTotal()"></td>
+                    <td class="subtotal">$130.00</td>
+                    <td><button class="remove-btn" onclick="removeItem(this)">Remove</button></td>
+                </tr>
+                <tr class="cart-item">
+                    <td> 2.6L Pumtus Floral Enamel Tea Kettle</td>
+                    <td class="price">$219.99</td>
+                    <td class="quantity"><input type="number" value="2" min="1" onchange="updateTotal()"></td>
+                    <td class="subtotal">$219.99</td>
+                    <td><button class="remove-btn" onclick="removeItem(this)">Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-summary">
+            <strong>Total: <span id="cart-total">$0.00</span></strong>
+        </div>
+
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 The Tea Nook. All rights reserved</p>
+    </footer>
+
+</body>
+</html>
